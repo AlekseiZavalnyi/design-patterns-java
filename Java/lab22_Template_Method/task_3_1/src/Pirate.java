@@ -1,11 +1,12 @@
 /**
  * Пірат
  */
-public class Pirate {
+public class Pirate extends Character {
 
   /**
    * Підняти зброю для захисту - оголити меч
    */
+  @Override
   public void pickUpWeapon() {
     System.out.println("Pick up sword");
   }
@@ -13,6 +14,7 @@ public class Pirate {
   /**
    * Захист
    */
+  @Override
   public void defenseAction() {
     System.out.println("Defend with sword");
   }
@@ -20,18 +22,10 @@ public class Pirate {
   /**
    * Повернення героя в безпечне місце
    */
+  @Override
   public void moveToSafety() {
     System.out.println("Return to the ship");
   }
 
-  /**
-   * Стратегія захисту та відступу
-   */
-  public void defendAgainstAttack() {
-    pickUpWeapon();
-    defenseAction();
-    moveToSafety();
-    System.out.println();
-  }
 
 }

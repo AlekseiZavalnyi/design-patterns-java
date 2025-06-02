@@ -1,11 +1,12 @@
 /**
  * Троль
  */
-public class Troll {
+public class Troll extends Character {
 
   /**
    * Підняти булаву
    */
+  @Override
   public void pickUpWeapon() {
     System.out.println("Pick up club");
   }
@@ -13,6 +14,7 @@ public class Troll {
   /**
    * Захищатися за допомогою булави
    */
+  @Override
   public void defenseAction() {
     System.out.println("Defend with club");
   }
@@ -20,18 +22,9 @@ public class Troll {
   /**
    * Повернутися в безпечне місце в горах
    */
+  @Override
   public void moveToSafety() {
     System.out.println("Return to the mountain");
-  }
-
-  /**
-   * Стратегія захисту та відступу
-   */
-  public void defendAgainstAttack() {
-    pickUpWeapon();
-    defenseAction();
-    moveToSafety();
-    System.out.println();
   }
 
 }
